@@ -6,26 +6,26 @@
 <meta charset="utf-8">
 <title>Inicio</title>
 </head>
-<body>
+<body class="bg-dark">
 
   <div layout:fragment="content">
-	<div class="bg-light p-5 rounded">
-	   <h3 class="display-1 text-success">Diego Villan Trailers</h3>
-           <h5>Bienvenido, pagina para ver los trailers de peliculas estrenos<br>
-               desde cualquier lugar donde te encuentres, no hay de que preocuparse<br>
-               si ingresar desde un computador, tablet o celular.
-           </h5>
+	<div class="bg-dark p-5 rounded">
+	   <h3 class="display-1 text-info">DNVX DEV</h3>
+           <p class="text-light">Bienvenido, pagina web para ver los trailers de peliculas estrenos
+               desde el lugar donde te encuentres, no hay de que preocuparse
+               puede ingresar desde una computadora, tablet o celular.
+           </p>
 	</div>	
 	
-	<h4 class="text-danger mt-5">Últimos estrenos</h4>
+	<h4 class="text-info mt-5">Últimos estrenos</h4>
 	
 	<div class="row">
 	    <div class="col-md-3 my-5" th:each="pelicula : ${ultimasPeliculas}" th:object="${pelicula}">
-	       <a th:href="@{/peliculas/{id}(id=*{id_pelicula})}" class="card shadow-lg" style="text-decoration:none;">
+	       <a th:href="@{/peliculas/{id}(id=*{id_pelicula})}" class="card shadow-lg border-info" style="text-decoration:none;">
 	       <img th:src="@{/assets/{filename}(filename=*{rutaPortada})}" th:alt="*{titulo}" class="card-img-top">
-	       <div class="card-body">
+	       <div class="card-body bg-dark">
 	          <h2 class="card-title fs-6" th:text="*{titulo}"></h2>
-	          <p th:text="*{#temporals.format(fechaEstreno,'dd/MM/yyyy')}" class="text-muted small"></p>
+	          <p th:text="*{#temporals.format(fechaEstreno,'dd/MM/yyyy')}" class="text-light small"></p>
 	       </div>
 	       </a>
 	    </div>

@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <title>[[${pelicula.titulo}]]</title>
 </head>
-<body>
+<body class="bg-dark">
 
 	<div layout:fragment="content" th:object="${pelicula}">
 		<div class="row">
@@ -26,11 +26,11 @@
                     </svg> Ver trailer
 					</a>
 				</div>
-				<h2 th:text="*{titulo}"></h2>
+				<h2 class="text-info" th:text="*{titulo}"></h2>
 				<div class="mb-3">
-					<span class="badge rounded-pull bg-light text-dark me-1"
+					<span class="badge rounded-pull bg-info text-dark me-1"
 						th:each="genero : *{generos}" th:text="${genero.titulo}"></span>
-					<p th:text="*{sinopsis}"></p>
+					<p class="text-light" th:text="*{sinopsis}"></p>
 				</div>
 			</div>
 		</div>
