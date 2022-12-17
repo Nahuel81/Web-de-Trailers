@@ -10,7 +10,8 @@
             rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous">
-
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <link rel="stylesheet"
               href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
         <link
@@ -24,27 +25,78 @@
         </style>
     </head>
     <body>
+        
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+        <!-- icono o nombre -->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">Diego Villan Trailers</a>
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/peliculas">Peliculas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/admin">Administración</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <a class="navbar-brand" href="/">
+          <span class="text-info">DNV</span>
+        </a>
+            
+        <!-- boton del menu -->
 
-        <div layout:fragment="content" class="container my-5">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <!-- elementos del menu colapsable -->
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/peliculas">Peliculas</a>
+            </li>
+          </ul>
+
+          <hr class="d-md-none text-white-50">
+
+           <!-- enlaces redes sociales -->
+
+          <ul class="navbar-nav  flex-row flex-wrap text-light">
+
+            <li class="nav-item col-6 col-md-auto p-3">
+                <a href="https://twitter.com/villandie" class="link-primary" target="_blank">
+                <i class="bi bi-twitter"></i></a>
+                <small class="d-md-none ms-2">Twitter</small>  
+            </li>
+
+            <li class="nav-item col-6 col-md-auto p-3">
+              <a href="https://www.github.com/Nahuel81" class="link-light" target="_blank">
+              <i class="bi bi-github"></i></a>
+              <small class="d-md-none ms-2">GitHub</small> 
+            </li>
+
+            <li class="nav-item col-6 col-md-auto p-3">
+             <a href="https://wa.me/+543482270495" class="link-success" target="_blank">
+             <i class="bi bi-whatsapp"></i></a>
+              <small class="d-md-none ms-2">WhatsApp</small>
+            </li>
+
+            <li class="nav-item col-6 col-md-auto p-3">
+              <a href="#" class="link-danger" target="_blank">
+              <i class="bi bi-instagram"></i></a>
+              <small class="d-md-none ms-2">Instagram</small>
+            </li>
+
+          </ul>
+          
+         <!--boton administracion -->
+
+          <form class="d-flex">
+           <button class="btn btn-outline-info d-none d-md-inline-block ">
+               <a class="nav-link" href="/admin">Administracion</a></button>
+          </form>
+          
+          
+        </div>
+     
+        </div>  
+      </nav>
+       <div layout:fragment="content" class="container my-5">
         </div>
 
         <script
